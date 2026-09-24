@@ -6,6 +6,11 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
+    "extra": {
+      "eas": {
+        "projectId": "65ee9052-0c27-4c53-a7c8-e609cc101c12"
+      }
+    },
     "android": {
       "package": "com.pugsdarts.app",
       "permissions": [
