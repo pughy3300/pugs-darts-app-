@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Pugs Darts App",
+    "slug": "pugs-darts-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.pugsdarts.app",
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Pugs Darts App to access your camera to detect dart throws."
+        }
+      ]
+    ]
+  }
+}
