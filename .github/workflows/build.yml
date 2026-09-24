@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -23,11 +23,8 @@ jobs:
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
-      - name: Force NPM Package Manager
-        run: npm set package-manager npm
-
-      - name: Install Dependencies via NPM
+      - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Build APK via EAS
+      - name: Trigger EAS Build
         run: npx eas-cli build --platform android --profile preview --non-interactive --no-wait
