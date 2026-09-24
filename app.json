@@ -2,6 +2,7 @@
   "expo": {
     "name": "Pugs Darts App",
     "slug": "pugs-darts-app",
+    "owner": "pughy3300s-team",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
