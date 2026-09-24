@@ -26,4 +26,4 @@ jobs:
       - name: Trigger EAS Build
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-        run: eas build --platform android --profile preview --non-interactive --no-wait --auto-submit=false
+        run: eas build --platform android --profile preview --non-interactive --no-wait
