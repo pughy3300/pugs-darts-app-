@@ -2,9 +2,7 @@ name: Build Android APK
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: ["*"]
   workflow_dispatch:
 
 jobs:
@@ -25,8 +23,11 @@ jobs:
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Force NPM Package Manager
+        run: npm set package-manager npm
+
+      - name: Install Dependencies via NPM
+        run: npm install --legacy-peer-deps
 
       - name: Build APK via EAS
-        run: eas build --platform android --profile preview --non-interactive
+        run: npx eas-cli build --platform android --profile preview --non-interactive --no-wait
