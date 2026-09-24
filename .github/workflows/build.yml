@@ -23,6 +23,11 @@ jobs:
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
 
+      - name: Initialize EAS Project
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: eas init --account pughy3300s-team --non-interactive --force
+
       - name: Trigger EAS Build
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
