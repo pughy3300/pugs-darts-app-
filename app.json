@@ -6,12 +6,17 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
     "splash": {
       "backgroundColor": "#121212",
       "resizeMode": "contain"
     },
     "android": {
       "package": "com.pugsdarts.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#121212"
+      },
       "permissions": [
         "android.permission.CAMERA"
       ]
